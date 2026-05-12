@@ -136,10 +136,3 @@ app.listen(8080, () =>{
 console.log("server is listening to port 8080");
 });
 
-const path = require("path");
-
-app.use(express.static(path.join(__dirname, "client/build")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build/index.html"));
-});
